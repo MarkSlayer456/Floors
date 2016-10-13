@@ -15,6 +15,7 @@ public class Button {
 	public Image design;
 	public String location;
 	
+	
 	public Button(int buttonX, int buttonY, int buttonWidth, int buttonHeight, String buttonText, Image buttonDesign, String buttonLocation) { // TODO finish this if needed
 		x = buttonX;
 		y = buttonY;
