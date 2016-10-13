@@ -9,12 +9,12 @@ public class Menu {
 	
 	public String name;
 	public ArrayList<Button> listOfButtons = new ArrayList<Button>();
+	public Image background;
 	
-	public Menu(String menuName, ArrayList<Button> menuListOfButtons, Image background) {
+	public Menu(String menuName, ArrayList<Button> menuListOfButtons, Image menuBackground) {
 		name = menuName;
 		listOfButtons = menuListOfButtons;
-		
-		
+		background = menuBackground;
 		
 		listOfMenuNames.add(name);
 	}

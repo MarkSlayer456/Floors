@@ -11,6 +11,10 @@ public class MenuManager extends GameManager {
 	
 	public HashMap<String, Menu> listOfMenus = new HashMap<String, Menu>();
 	
+	public MenuManager(String managerEnabledMenu) {
+		enabledMenu = managerEnabledMenu;
+	}
+	
 	public void createMenus() {
 		listOfMenus.put("game", null); // When there is no menu active use this
 		Menu.listOfMenuNames.add("none");

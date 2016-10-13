@@ -23,7 +23,7 @@ public class Game extends Canvas implements Runnable {
 
 	private static final long serialVersionUID = -2917034081040044435L;
 
-	public MenuManager menuManager = new MenuManager();
+	public MenuManager menuManager = new MenuManager("main"); // The default is "main"
 	
 	public GameManager manager = GameManager.getInstance();
 	
@@ -66,7 +66,7 @@ public class Game extends Canvas implements Runnable {
 	}
 	// TODO remove this line
 	public InputManager playerTest = new InputManager(new ArrayList<Integer>(), new HashMap<MouseEvent, Point>());
-	public Menu playerMenu = new Menu("null", null, null);
+	public MenuManager playerMenu = new MenuManager("main");
 	public HashMap<Integer, Item> playerInv = new HashMap<Integer, Item>();
 	public Player player;
 	
@@ -104,8 +104,9 @@ public class Game extends Canvas implements Runnable {
 			  //g.drawImage(manager.backGround, 0, 0, getWindow().getWidth(), (int) (getWindow().getHeight() - (getWindow().getHeight() * .09)), this); // Draws background
 			  //g.drawImage(manager.player, player.rect.x, player.rect.y, 40, 80, this);
 			  
-			  	
-			  String enabledMenu = menuManager.enabledMenu;
+			  // Draws all buttons according to what menu is open 
+			  // Loop through players
+			  String enabledMenu = player.menuManager.enabledMenu;
 			  for(int i = 0; i < Button.listOfButtons.size(); i++) {
 				  Button button = Button.listOfButtons.get(i);
 				  if(button.location == enabledMenu) {

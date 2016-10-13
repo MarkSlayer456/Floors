@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import floors.main.item.Item;
 import floors.main.managers.InputManager;
+import floors.main.managers.MenuManager;
 import floors.main.menus.Menu;
 
 public class Player {
@@ -35,13 +36,13 @@ public class Player {
 	
 	///// Arrays /////
 	public InputManager InputManager;
-	public Menu currentMenu;
+	public MenuManager menuManager;
 	
 	
 	
 	public Player(double playerSpeed, double playerDamage, String playerName, boolean playerAlive,
 			Rectangle playerRect, HashMap<Integer, Item> playerInventory, int playerHeight, int playerWidth,
-			Point playerSpawnPoint, InputManager playerInputHandler, Menu playerCurrentPlayerMenu) {
+			Point playerSpawnPoint, InputManager playerInputHandler, MenuManager playerCurrentPlayerMenu) {
 		speed = playerSpeed;
 		damage = playerDamage;
 		name = playerName;
@@ -51,7 +52,7 @@ public class Player {
 		height = playerHeight;
 		spawnPoint = playerSpawnPoint;
 		InputManager = playerInputHandler;
-		currentMenu = playerCurrentPlayerMenu;
+		menuManager = playerCurrentPlayerMenu;
 		
 		rect = new Rectangle(playerSpawnPoint.x, playerSpawnPoint.y, playerWidth, playerHeight);
 		hitBox = new Rectangle(playerSpawnPoint.x, playerSpawnPoint.y, playerWidth + 2, playerHeight + 2);
