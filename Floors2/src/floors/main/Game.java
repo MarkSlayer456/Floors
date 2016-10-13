@@ -16,7 +16,6 @@ import floors.main.managers.GameManager;
 import floors.main.managers.InputManager;
 import floors.main.managers.MenuManager;
 import floors.main.menus.Button;
-import floors.main.menus.Menu;
 
 
 public class Game extends Canvas implements Runnable {
