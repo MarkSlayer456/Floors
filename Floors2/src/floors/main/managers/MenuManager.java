@@ -20,22 +20,36 @@ public class MenuManager extends GameManager {
 		Menu.listOfMenuNames.add("none");
 		///// Main Menu /////
 		ArrayList<Button> mainButtonList = new ArrayList<Button>();
-		Button mainButton = new Button(10, 100, 250, 40, "Start", null, "main"); // Start button
-		Button mainButton1 = new Button(10, 170, 250, 40, "Options", null, "main"); // Options button
-		Button mainButton2 = new Button(10, 240, 250, 40, "Quit", null, "main"); // Quit button
-		mainButtonList.add(mainButton);
-		mainButtonList.add(mainButton1);
-		mainButtonList.add(mainButton2);
+		mainButtonList.add(new Button(10, 100, 250, 40, "Start", null, "main", null)); // Start button
+		mainButtonList.add(new Button(10, 170, 250, 40, "Options", null, "main", null)); // Options button
+		mainButtonList.add(new Button(10, 240, 250, 40, "Quit", null, "main", null)); // Quit button
+		// The last null on those is because there is no property associated with that button
+		// The first null on those is for the button image later
 		Menu mainMenu = new Menu("main", mainButtonList, null);
 		listOfMenus.put("main", mainMenu);
 		
 		///// Pause Menu /////
 		ArrayList<Button> pauseButtonList = new ArrayList<Button>();
-		Button pauseButton = new Button(50, 50, 50, 50, "Resume", null, "pause");
-		Button pauseButton1 = new Button(100, 100, 50, 50, "Quit", null, "pause");
-		pauseButtonList.add(pauseButton);
-		pauseButtonList.add(pauseButton1);
+		pauseButtonList.add(new Button(50, 50, 50, 50, "Resume", null, "pause", null));
+		pauseButtonList.add(new Button(100, 100, 50, 50, "Return To Title", null, "pause", null));
+		pauseButtonList.add(new Button(150, 150, 50, 50, "Quit", null, "pause", null));
 		Menu pauseMenu = new Menu("pause", pauseButtonList, null);
 		listOfMenus.put("pause", pauseMenu);
+		
+		///// Options Menu /////
+		ArrayList<Button> optionsButtonList = new ArrayList<Button>();
+		optionsButtonList.add(new Button(50, 50, 50, 50, "Back", null, "options", null)); // Back button
+		optionsButtonList.add(new Button(50, 50, 50, 50, "Controls", null, "options", null)); // Controls button
+		Menu optionsMenu = new Menu("options", optionsButtonList, null);
+		listOfMenus.put("options", optionsMenu);
+		
+		
+		///// ControlSettings Menu ///// Sub menu of options
+		ArrayList<Button> consetButtonList = new ArrayList<Button>();
+		consetButtonList.add(new Button(50, 50, 50, 50, "apply", null, "controls", null));
+		//TODO add control buttons here
+		Menu controlSettingsMenu = new Menu("controls", consetButtonList, null);
+		
+		
 	}
 }
