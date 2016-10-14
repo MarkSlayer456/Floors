@@ -14,9 +14,12 @@ public class Button {
 	public String text;
 	public Image design;
 	public String location;
+	public String property;
 	
 	
-	public Button(int buttonX, int buttonY, int buttonWidth, int buttonHeight, String buttonText, Image buttonDesign, String buttonLocation) { // TODO finish this if needed
+	public Button(int buttonX, int buttonY, int buttonWidth, int buttonHeight, String buttonText, Image buttonDesign, String buttonLocation,
+		     String buttonProperty) { // TODO finish this if needed
+		// The property string is for the settings menu if it has a property then use it if not don't
 		x = buttonX;
 		y = buttonY;
 		width = buttonWidth;
@@ -24,6 +27,7 @@ public class Button {
 		text = buttonText;
 		design = buttonDesign;
 		location = buttonLocation;
+		property = buttonProperty;
 		listOfButtons.add(this);
 	}
 
