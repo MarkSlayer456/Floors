@@ -103,8 +103,11 @@ public class Game extends Canvas implements Runnable {
 			  //g.drawImage(manager.backGround, 0, 0, getWindow().getWidth(), (int) (getWindow().getHeight() - (getWindow().getHeight() * .09)), this); // Draws background
 			  //g.drawImage(manager.player, player.rect.x, player.rect.y, 40, 80, this);
 			  
+			  // TODO setup scaling with g.scale(x); for the resolution
+			
 			  // Draws all buttons according to what menu is open 
 			  // Loop through players
+			  // TODO Check to see if each button has a property
 			  String enabledMenu = player.menuManager.enabledMenu;
 			  for(int i = 0; i < Button.listOfButtons.size(); i++) {
 				  Button button = Button.listOfButtons.get(i);
