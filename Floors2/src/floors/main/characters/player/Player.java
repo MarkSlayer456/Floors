@@ -8,7 +8,6 @@ import java.util.HashMap;
 import floors.main.item.Item;
 import floors.main.managers.InputManager;
 import floors.main.managers.MenuManager;
-import floors.main.menus.Menu;
 
 public class Player {
 	
@@ -42,7 +41,7 @@ public class Player {
 	
 	public Player(double playerSpeed, double playerDamage, String playerName, boolean playerAlive,
 			Rectangle playerRect, HashMap<Integer, Item> playerInventory, int playerHeight, int playerWidth,
-			Point playerSpawnPoint, InputManager playerInputHandler, MenuManager playerCurrentPlayerMenu) {
+			Point playerSpawnPoint, InputManager playerInputHandler, MenuManager playerCurrentPlayerMenu) { // This will get really long
 		speed = playerSpeed;
 		damage = playerDamage;
 		name = playerName;

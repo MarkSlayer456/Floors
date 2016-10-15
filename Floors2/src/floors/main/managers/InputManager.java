@@ -8,6 +8,8 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import floors.main.characters.player.Player;
+
 public class InputManager extends GameManager implements KeyListener, MouseListener {
 	
 	
@@ -15,9 +17,12 @@ public class InputManager extends GameManager implements KeyListener, MouseListe
 	
 	public HashMap<MouseEvent, Point> coords; // Tells the player the coords of the last mouse click
 	
-	public InputManager(ArrayList<Integer> list, HashMap<MouseEvent, Point> xy) {
+	public boolean mouseWasReleasedB = false;
+	
+	public InputManager(ArrayList<Integer> list, boolean IMmouseWasReleasedB, Player player) { //TODO fix this
 		keysDown = list;
-		coords = xy;
+		mouseWasReleasedB = IMmouseWasReleasedB;
+		
 	}
 	
 	
@@ -81,7 +86,7 @@ public class InputManager extends GameManager implements KeyListener, MouseListe
 
 		@Override
 		public void mouseReleased(MouseEvent e) {
-			
+			mouseWasReleasedB = true;
 		}
 	
 	

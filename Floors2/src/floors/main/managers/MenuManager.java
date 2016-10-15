@@ -49,6 +49,7 @@ public class MenuManager extends GameManager {
 		consetButtonList.add(new Button(50, 50, 50, 50, "apply", null, "controls", null));
 		//TODO add control buttons here
 		Menu controlSettingsMenu = new Menu("controls", consetButtonList, null);
+		listOfMenus.put("controls", controlSettingsMenu);
 		
 		
 	}

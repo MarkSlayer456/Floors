@@ -64,7 +64,7 @@ public class Game extends Canvas implements Runnable {
 			}
 	}
 	// TODO remove this line
-	public InputManager playerTest = new InputManager(new ArrayList<Integer>(), new HashMap<MouseEvent, Point>());
+	public InputManager playerTest;
 	public MenuManager playerMenu = new MenuManager("main");
 	public HashMap<Integer, Item> playerInv = new HashMap<Integer, Item>();
 	public Player player;
@@ -73,7 +73,9 @@ public class Game extends Canvas implements Runnable {
 		getWindow().setVisible(true);
 		manager.setup();
 		menuManager.createMenus();
-		player = new Player(1, 5, "MarkSlayer456", true, new Rectangle(20, getWindow().getHeight() - 190, 40, 80), playerInv, 40, 80, new Point(20, getWindow().getHeight() - 190), playerTest, playerMenu);
+		player = new Player(1, 5, "MarkSlayer456", true, new Rectangle(20, getWindow().getHeight() - 190, 40, 80), playerInv, 40, 80, new Point(20, getWindow().getHeight() - 190), null, playerMenu);
+		playerTest = new InputManager(new ArrayList<Integer>(), false, player); // TODO fix this
+		player.InputManager = playerTest;
 		getWindow().addKeyListener(playerTest);
 		setup = true;
 	}
