@@ -4,7 +4,7 @@ import java.awt.Image;
 import java.util.ArrayList;
 
 public class Menu {
-	
+	// hate everything TODO remove this
 	public static ArrayList<String> listOfMenuNames = new ArrayList<String>();
 	
 	public String name;
